@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crael Developers | Web Developer Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">
+                <!-- SVG Logo for scalability -->
+                <img src="logo.png" alt="Crael Developers Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Parallax scrolling effect for the hero section -->
+    <section class="hero">
+        <div class="hero-content parallax">
+            <h1 class="animated-heading">Hi, We're <span class="highlight">Crael Developers</span></h1>
+            <p>Passionate Web Developers</p>
+            <a href="#projects" class="cta-button" id="view-work-button">View Our Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="animated-heading">About Us</h2>
+            <p>We're a web developing company focused on creating clean, efficient, and user-centric websites. Our goal is to bring innovative ideas to life with code.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="animated-heading">Projects</h2>
+            <div class="project-group">
+                <div class="project-card">
+                    <!-- Example of using SVG graphics -->
+                    <img src="project1.svg" loading="lazy" alt="Project 1">
+                    <h3 class="animated-heading">Project One</h3>
+                    <p>Brief description of the project. What problem did it solve? What technology was used?</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.svg" loading="lazy" alt="Project 2">
+                    <h3 class="animated-heading">Project Two</h3>
+                    <p>Brief description of the project. What problem did it solve? What technology was used?</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3.svg" loading="lazy" alt="Project 3">
+                    <h3 class="animated-heading">Project Three</h3>
+                    <p>Brief description of the project. What problem did it solve? What technology was used?</p>
+                </div>
+                <div class="project-card">
+                    <img src="project4.svg" loading="lazy" alt="Project 4">
+                    <h3 class="animated-heading">Project Four</h3>
+                    <p>Brief description of the project. What problem did it solve? What technology was used?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="animated-heading">Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="animated-heading">Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Crael Developers. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+        <a href="#" class="back-to-top">Back to Top</a>
+    </footer>
+
+    <!-- Deferred script loading for better performance -->
+    <script src="Scroll.js" defer></script>
+    <script src="parallax.js" defer></script>
+    <script src="animations.js" defer></script>
+    <script>
+        // Example of scroll-triggered animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedHeadings = document.querySelectorAll('.animated-heading');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            });
+
+            animatedHeadings.forEach(heading => {
+                observer.observe(heading);
+            });
+        });
+    </script>
+</body>
+
+</html>
